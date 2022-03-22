@@ -15,16 +15,16 @@ import {
 const bookCollectionRef = collection(database, "books")
 
 class BookDataService {
-    addBooks = (newBook) => {
+    addBooks = (newBook: { title: string; author: string; avaible: string; }) => {
         return addDoc(bookCollectionRef, newBook)
     }
 
-    updateBook = (id, updatedBook) => {
+    updateBook = (id: string, updatedBook: any) => {
         const bookDoc = doc(database, "books", id);
         return updateDoc(bookDoc, updatedBook);
     }
 
-    deleteBook = (id) => {
+    deleteBook = (id: string) => {
         const bookDoc = doc(database, "books", id);
         return deleteDoc(bookDoc);
     }
@@ -33,15 +33,13 @@ class BookDataService {
         return getDocs(bookCollectionRef);
     }
 
-    getBook = (id) => {
+    getBook = (id: string) => {
         const bookDoc = doc(database, "books", id);
         return getDoc(bookDoc);
     }
 
-
-
-    search = (keyword) => {
-        const q = query(bookCollectionRef, where("author", "==", keyword));
+    search = (keywords: string[], searchWhere: string) => {
+        const q = query(bookCollectionRef, where(searchWhere, "in", keywords));
         return getDocs(q);
     }
 }

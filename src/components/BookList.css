@@ -1,0 +1,16 @@
+tr:nth-child(2n) {
+    background-color: rgb(211, 211, 211);
+}
+
+table, td, th {
+  border: 1px solid;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+table img {
+    max-height: 150px;
+    object-fit: contain; 
+}
