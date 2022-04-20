@@ -1,0 +1,154 @@
+.AddUpItemWrapper {
+  padding: 20px 0;
+  display: flex;
+}
+
+.formContainer, .fileUpContainer{
+  flex: 1;
+}
+
+.fileUpContainer{
+  margin-left: 10px;
+}
+
+.formContainer{
+  margin-right: 10px;
+}
+
+.input, .select, .textArea {
+    -ms-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box; 
+    box-sizing:border-box;
+
+    background-color: var(--color-MainColor);
+    border-radius: 3px;
+    border: 1px solid var(--color-MainBorderColor);
+    font-size: large;  
+    width: 100%;
+    margin:10px 0; 
+}
+
+.input, .select {
+  height: 38px;   
+  padding: 0px 20px; 
+}
+
+.textArea {
+  padding: 20px;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgb(173, 173, 173);
+  opacity: 1; /* Firefox */
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 20px 0px 40px 0px;
+}
+
+.AddUpMain__title{
+  font-size: 35px;
+  font-weight: bold;
+  margin: 25px 0px;
+}
+
+.previewImg {
+  width: 100%;
+  height: auto;
+}
+
+#imgPre {
+  opacity: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.fileUpButton {
+  background-color: var(--color-MainColor);
+  border-radius: 6px;
+  padding: 10px 15px;
+  margin: 15px 0px; 
+}
+
+.fileUpButton__container {
+  display: flex;
+  justify-content: center;
+  padding: 0px 40px;
+}
+
+.arrowAnimation {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 150px;
+  flex: 1
+}
+
+.arrowBlack {
+  width: 12px;
+  height: 12px;
+  border: 7px solid;
+  border-color: #cccccc transparent transparent #cccccc;
+  transform: rotate(135deg);
+}
+
+
+.arrowPink {
+  width: 12px;
+  height: 12px;
+  border: 7px solid ;
+  border-color: var(--color-Pink) transparent transparent var(--color-Pink);
+  transform: rotate(135deg);
+
+  animation-name: color;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+.fileUpForm {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.delay1 {
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+}
+
+.delay2 {
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+}
+
+.delay3 {
+  -webkit-animation-delay: 3s;
+  animation-delay: 3s;
+} 
+
+@keyframes color {
+0% {
+  opacity: 1;
+}
+
+50% {
+  opacity: 0.5;
+}
+
+100% {
+  opacity: 1;
+}
+    
+  
+}
+
+.fileUpProgress {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

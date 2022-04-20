@@ -8,40 +8,65 @@ import {
     deleteDoc,
     doc,
     query,
-    where
+    where,
+    limit
 } from "firebase/firestore";
 
+export interface Item {    
+    item: {        
+        name: string;
+        price: string;
+        gender: string;
+        type: string;
+        size: string;
+        brand: string;
+        color: string;
+        city: string;
+        description: string;
+    };
+    date: number;
+    imgUrl: string;
+    id?: string;
+    uploaderName?: string;
+    uploaderEmail?: string;
+}
 
-const bookCollectionRef = collection(database, "books")
+const itemCollectionRef = collection(database, "items")
 
-class BookDataService {
-    addBooks = (newBook: { title: string; author: string; avaible: string; }) => {
-        return addDoc(bookCollectionRef, newBook)
+class ItemDataService {
+    addItems = (newItem: Item) => {
+        return addDoc(itemCollectionRef, newItem)
     }
 
-    updateBook = (id: string, updatedBook: any) => {
-        const bookDoc = doc(database, "books", id);
-        return updateDoc(bookDoc, updatedBook);
+    updateItem = (id: string, updatedItem: any) => {
+        const itemDoc = doc(database, "items", id);
+        return updateDoc(itemDoc, updatedItem);
     }
 
-    deleteBook = (id: string) => {
-        const bookDoc = doc(database, "books", id);
-        return deleteDoc(bookDoc);
+    deleteItem = (id: string) => {
+        const itemDoc = doc(database, "items", id);
+        return deleteDoc(itemDoc);
     }
 
-    getAllBooks = () => {
-        return getDocs(bookCollectionRef);
+    getAllItems = () => {
+        return getDocs(itemCollectionRef);
     }
 
-    getBook = (id: string) => {
-        const bookDoc = doc(database, "books", id);
-        return getDoc(bookDoc);
+    getItem = (id: string) => {
+        const itemDoc = doc(database, "items", id);
+        return getDoc(itemDoc);
     }
 
-    search = (keywords: string[], searchWhere: string) => {
-        const q = query(bookCollectionRef, where(searchWhere, "in", keywords));
+    search = (searchWhere: string, keywords: string[] ) => {
+        const q = query(itemCollectionRef, where(searchWhere, "in", keywords));
+        return getDocs(q);
+    }
+
+    simpleSearch = (whereToSearch: string ,target: string) => {
+        const q = query(itemCollectionRef, where(whereToSearch, "==", target));
         return getDocs(q);
     }
 }
 
-export default new BookDataService();
+export default new ItemDataService();
+

@@ -1,0 +1,120 @@
+.NavBar__upper{
+    background-color: var(--color-MainBlue);
+    padding: 12px 15px;
+
+    display: grid;
+    grid-template-columns: 1fr 0.5fr 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+
+}
+
+
+.NavBar__upper__item, .NavBar__lower__item {
+    color: white;
+    text-decoration: none;
+}
+
+.NavBar__upper__itemContainer, .NavBar__bar {
+    color: white;
+}
+
+.NavBar__bar {
+    padding: 0px 15px;
+}
+
+.NavBar__logout {
+    cursor: pointer;
+}
+
+.NavBar__upper__loginContainer {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+.NavBar__upper__logedinContainer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.NavBar__upper__nameContainer {
+    display: flex;
+    align-items: center;
+}
+
+.NavBar__upper__nameContainer {
+    display: flex;
+    align-items: center;
+}
+
+.NavBar__lower {
+    background-color: var(--color-SecondaryBlue);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+
+}
+
+.--centerItems {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.NavBar__lower__itemContainer {
+    padding: 10px;
+}
+
+.NavBar__lower__itemContainer:hover {
+   background-color: #486683;
+   text-decoration: underline;
+   cursor: pointer;
+}
+
+/* .NavBar__upper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+} */
+
+.logo {
+    height: 55px;
+    width: auto;
+}
+
+.NavBar__upper__itemContainer span{
+    font-style: italic;
+}
+
+.NavBar__upper__loginItem:hover, .NavBar__logout:hover {
+    text-decoration: underline;
+}
+
+.NavBar__upper__logo {
+    grid-auto-columns: 0.5fr;
+}
+
+.TextLogo {
+    letter-spacing: 5px;
+    font-weight: 1200;
+    font-size: large;
+
+    background-color: rgb(244, 143, 177);
+    background-image: linear-gradient(297deg, rgba(255, 255, 255, 1) 0%, rgba(244, 143, 177, 1) 100%);
+
+    background-size: 100%;
+    background-repeat: repeat;
+    
+    /* Use the text as a mask for the background. */
+    /* This will show the gradient as a text color rather than element bg. */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+}

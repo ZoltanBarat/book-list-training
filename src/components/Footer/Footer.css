@@ -1,0 +1,36 @@
+.footerWrapper {
+    background-color: var(--color-MainBlue);
+    color: white;
+    padding: 2%;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 30px;
+    grid-row-gap: 0px;
+
+    margin-top: 60px;
+}
+
+.footer__techLogo {
+    margin-left: 15px;
+    height: 24px;
+    width: auto;
+}
+
+.footer__techLogoContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    padding: 5px;
+}
+
+.footer__techContainer ul {
+    margin-top: 20px;
+    margin-left: 50px;
+}
+
+.footer__techContainer ul li{
+    margin: 10px 0px;
+}

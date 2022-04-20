@@ -1,0 +1,25 @@
+.NModalWrapper {
+    position: fixed;
+    padding: 15px 25px;    
+    top: 25%;
+
+    background-color: var(--color-MainBlue);
+    color: white;
+
+    display: flex;
+    align-items: center;
+
+    left: -300px;
+    transition: left 1.5s;
+
+    z-index: 100;
+}
+
+.tick {
+    height: 24px;
+    margin-right: 15px;
+}
+
+.--showModal {
+   left: 0;
+}

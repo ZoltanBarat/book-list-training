@@ -1,0 +1,33 @@
+.btn {
+    background-color: var(--color-MainBlue);
+    border: 2px solid var(--color-MainBlue);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font: inherit;
+    transition: 0.25s;
+}
+
+.btn:hover {
+    color: black;
+    background-color: var(--color-background);
+    border: 2px solid var(--color-MainText);
+}
+
+.btnMargin {
+    margin: 20px 0px;
+}
+
+.btn:disabled,
+.btn[disabled] {
+    border: 1px solid #999999;
+    background-color: #cccccc;
+    color: #666666;
+}
+
+button:disabled:hover,.btn[disabled]:hover {
+    border: 1px solid #999999;
+    background-color: #cccccc;
+    color: #666666;
+}

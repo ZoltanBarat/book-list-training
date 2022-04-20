@@ -1,0 +1,126 @@
+.myListItemContainer {
+    margin: 20px 0px;
+    padding: 15px;
+    background-color: var(--color-MainColor);
+
+    border-radius: 6px;
+    border: 1px solid var(--color-MainBorderColor);
+    box-shadow: 0 10px 34px -15px rgb(0 0 0 / 24%);
+}
+
+.myListItemTextGrid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.myListImg {
+    width: 100px;
+    height: 100px;
+}
+
+.myListItem__title {
+    font-size: small;
+    font-style: italic;
+}
+
+.myListItem__details {
+    color: var(--color-MainBlue);
+}
+
+.myListItem__column,
+.myListItem__buttonColumn {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    max-height: 100px;
+    max-width: 150px;
+}
+
+.myListItem__imgColumn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.myListItem__element {
+    padding: 5px 0px;
+}
+
+.myListItem__buttonColumn {
+    padding: 0px 10px;
+}
+
+
+.descriptionButton {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted var(--color-MainText);
+    cursor: pointer;
+}
+
+.descriptiontext {
+    visibility: hidden;
+    width: 300px;
+    color: white;
+    background-color: var(--color-SecondaryBlue);
+    border: 1px solid var(--color-MainBorderColor);
+    text-align: left;
+    border-radius: 6px;
+    padding: 10px;
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px;
+}
+
+.descriptionButton:hover .descriptiontext {
+    visibility: visible;
+}
+
+.myListInnerDelete {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.myListInnerDeleteButton {
+    border: none;
+    font-weight: bolder;
+    padding: 15px 0px;
+}
+
+.myListInnerDelete__ok {
+    background-color: var(--color-Pink);
+    border-bottom-left-radius: 6px;
+    border-top-left-radius: 6px;
+}
+
+.myListInnerDelete__cancel {
+    background-color: var(--color-SecondaryBlue);
+    border-bottom-right-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+.myListInnerDelete__ok:hover {
+    background-color: #e991ae;
+}
+
+.myListInnerDelete__cancel:hover {
+    background-color: #6e7e8b;
+}
+
+.myListItem__buttonColumn__Text {
+    display: flex;
+    justify-content: center;
+
+    font-size: small;
+}
