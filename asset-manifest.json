@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/book-list-training/static/css/main.000da4a4.css",
+    "main.js": "/book-list-training/static/js/main.c3ecf04e.js",
+    "static/js/787.8b13ecbe.chunk.js": "/book-list-training/static/js/787.8b13ecbe.chunk.js",
+    "index.html": "/book-list-training/index.html",
+    "main.000da4a4.css.map": "/book-list-training/static/css/main.000da4a4.css.map",
+    "main.c3ecf04e.js.map": "/book-list-training/static/js/main.c3ecf04e.js.map",
+    "787.8b13ecbe.chunk.js.map": "/book-list-training/static/js/787.8b13ecbe.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.000da4a4.css",
+    "static/js/main.c3ecf04e.js"
+  ]
+}
