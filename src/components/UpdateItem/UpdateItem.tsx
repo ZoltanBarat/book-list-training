@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import { UpdateIDContext } from '../../context/UpdateIDContext.js';
 import Button from '../../elements/Button';
-import ItemDataService,{ Item } from '../../services/book-services';
+import ItemDataService,{ Item } from '../../services/firebase-services';
 import Loading from '../Loading/Loading';
 
 function UpdateItem() {

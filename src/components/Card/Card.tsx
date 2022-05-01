@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import Button from '../../elements/Button';
-import { Item } from '../../services/book-services';
+import { Item } from '../../services/firebase-services';
 import { DateConverter } from '../../services/date-converter';
 import "./Card.css";
 

@@ -28,7 +28,7 @@ function NavBar({
     <nav className="NavBarContainer" id="top">
       <div className="NavBar__upper">
         <div className="NavBar__upper__nameContainer">
-          <Link className="NavBar__upper__item TextLogo" to="/">
+          <Link className="NavBar__upper__item TextLogo" to="used-clothing/">
             Used Clothing
           </Link>
         </div>
@@ -66,7 +66,7 @@ function NavBar({
             <div className="NavBar__bar">|</div>
             <div className="NavBar__upper__itemContainer">
               <p className="NavBar__logout" onClick={handlelogOut}>
-                <Link className="NavBar__upper__item" to="/">
+                <Link className="NavBar__upper__item" to="used-clothing/">
                   Log Out
                 </Link>
               </p>
@@ -78,12 +78,12 @@ function NavBar({
       <div className="NavBar__lower">
         <Link
           className="NavBar__lower__item"
-          to="/"
+          to="used-clothing/"
           onClick={() => setMainSearch("")}
         >
           <div className="NavBar__lower__itemContainer --centerItems">All</div>
         </Link>
-        <Link className="NavBar__lower__item" to="/">
+        <Link className="NavBar__lower__item" to="used-clothing/">
           <div
             className="NavBar__lower__itemContainer --centerItems"
             onClick={() => setMainSearch("woman")}
@@ -93,7 +93,7 @@ function NavBar({
         </Link>
         <Link
           className="NavBar__lower__item"
-          to="/"
+          to="used-clothing/"
           onClick={() => {
             setMainSearch("man");
           }}

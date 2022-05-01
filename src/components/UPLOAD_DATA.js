@@ -1,4 +1,4 @@
-import ItemDataService from '../services/book-services.ts';
+import ItemDataService from '../services/firebase-services.ts';
 
 const Name = ["Patterned", "Worn", "Vintage", "Modern", "Colorful", "Novel"];
 const Price = ["1500","3000","10000","6500","2500","4600","3250","8400",];
@@ -76,11 +76,11 @@ const UpDate = [1648716356372,1648203096000,1646388696000,1645870296000,16456974
 
 
 const User = {
-    UploaderName: "Charlotte",
-    UploaderEmail: "charlotte@testmailx.com"
+    UploaderName: "Test Elek",
+    UploaderEmail: "test@test.test"
 }
 
-const repeat = 11;
+const repeat = 8;
 
   /*
     Olivia Smith   
@@ -101,6 +101,10 @@ const repeat = 11;
 
     Test User
     test@testmailx.com
+    123456
+
+    Test Elek
+    test@test.test
     123456
   */
 

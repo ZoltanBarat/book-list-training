@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { useUserAuth } from '../../context/UserAuthContext';
 import Button from '../../elements/Button';
 import { storage } from "../../firebase-config";
-import ItemDataService from '../../services/book-services';
+import ItemDataService from '../../services/firebase-services';
 import "./AddUpdateItem.css";
 
 import { TestUPLOAD_DATA } from "../UPLOAD_DATA";
@@ -436,10 +436,9 @@ function AddItem({id, setItemId} : {id: string, setItemId: Function}) {
             value="submit"
           />
         </div>
-        {/*  <button onClick={test}>Test the user</button>
         <button onClick={() => TestUPLOAD_DATA()}>
           Test the random item generator 
-        </button> */}
+        </button> 
       </div>
     </div>
   );

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useUserAuth } from '../../context/UserAuthContext';
 import Button from '../../elements/Button';
-import ItemDataService, { Item } from "../../services/book-services";
+import ItemDataService, { Item } from "../../services/firebase-services";
 import { DateConverter } from "../../services/date-converter";
 import "./Product.css";
 

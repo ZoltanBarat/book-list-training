@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useUserAuth } from '../../context/UserAuthContext';
-import ItemDataService, { Item } from '../../services/book-services';
+import ItemDataService, { Item } from '../../services/firebase-services';
 import Card from '../Card/Card';
 import Loading from '../Loading/Loading';
 import "./ItemList.css";

@@ -47,11 +47,10 @@ function App() {
         <NavBar id={""} setItemId={setItemId} setMainSearch={setMainSearch} />
         <NotificationModal />
 
-        <Routes>    
-
+        <Routes>
           <Route path="/test" element={<Loading />} />
           <Route
-            path="/"
+            path="/used-clothing/"
             element={<HomePage setItemId={setItemId} mainSearch={mainSearch} />}
           />
           <Route
@@ -82,12 +81,12 @@ function App() {
           />
           <Route
             path="/update"
-            element={              
-                <ProtectedRoute>
-                  <UpdateIDContextProvider>
-                    <UpdateItem />
-                  </UpdateIDContextProvider>
-                </ProtectedRoute>             
+            element={
+              <ProtectedRoute>
+                <UpdateIDContextProvider>
+                  <UpdateItem />
+                </UpdateIDContextProvider>
+              </ProtectedRoute>
             }
           />
 
