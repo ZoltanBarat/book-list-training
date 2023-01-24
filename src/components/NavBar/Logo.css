@@ -1,0 +1,22 @@
+.logo-text {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: sans-serif;
+    color: white;
+    font-size: 20px;
+    margin-right: 8px;
+}   
+
+.logo-wrapper {
+    background-color: black;
+    padding: 8px 15px;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+
+}
+
+.logo-svg {
+    transform: rotate(45deg);
+}

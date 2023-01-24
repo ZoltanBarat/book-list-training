@@ -1,14 +1,12 @@
-import { createContext, useState } from 'react';
-import { Link, Route, Routes } from "react-router-dom";
-import './App.css';
+import { useState } from 'react';
+import { Link, Navigate, Route, Routes } from "react-router-dom";
 import AddItem from './components/AddUpdateItem/AddUpdateItem';
-import ItemList from "./components/ItemList/ItemList";
 import Login from './components/Login/Login';
 import NavBar from "./components/NavBar/NavBar";
 import Product from './components/Product/Product';
 import ProtectedRoute from './components/ProtectedRoute';
 import Singup from './components/Singup/Singup';
-import { UserAuthContextProvider, useUserAuth } from './context/UserAuthContext';
+import { UserAuthContextProvider } from './context/UserAuthContext';
 import NotificationModal from './components/NotificationModal/NotificationModal';
 import MyList from './components/MyList/MyList';
 import HomePage from './pages/HomePage';
@@ -16,15 +14,34 @@ import Footer from './components/Footer/Footer';
 import Loading from './components/Loading/Loading';
 import { UpdateIDContextProvider } from './context/UpdateIDContext.js';
 import UpdateItem from './components/UpdateItem/UpdateItem';
+import i18next from 'i18next';
+import { initReactI18next, useTranslation } from 'react-i18next';
+import ScrollToTop from './components/ScrollToTop/ScrollToTop';
 
+
+i18next
+.use(initReactI18next) 
+.init({
+  resources: {
+    en: {
+      translation: require('./locales/en/translation.json')
+    },
+    hu: {
+      translation: require('./locales/hu/translation.json')
+    }
+  },
+  lng: 'en',
+  fallbackLng: 'hu',
+});
 
 function NoMatch() {
+  const { t } = useTranslation();
   return (
     <div className="centerContainer">
       <div className="subCenterContainer">      
-          <h2>Nothing to see here!</h2>
+          <h2>{t('nomatch.text')}</h2>
           <p>
-            <Link to="/">Go to the home page</Link>
+            <Link to="/retrend/">{t('nomatch.link')}</Link>
           </p>
       </div>
     </div>
@@ -32,25 +49,20 @@ function NoMatch() {
 }
 
 function App() {
-
-  
   const [itemId, setItemId] = useState('');
-  const [mainSearch, setMainSearch] = useState("");
-
-  const getItemIdHandler = (id: string) => {
-    setItemId(id);
-  }
+  const [mainSearch, setMainSearch] = useState("all");
 
   return (
     <div className="App">
       <UserAuthContextProvider>
-        <NavBar id={""} setItemId={setItemId} setMainSearch={setMainSearch} />
+        <NavBar setMainSearch={setMainSearch} mainSearch={mainSearch} />
+        <ScrollToTop />
         <NotificationModal />
-
         <Routes>
+          <Route index element={<Navigate to="/retrend/" />} />
           <Route path="/test" element={<Loading />} />
-          <Route
-            path="/used-clothing/"
+          <Route 
+            path="/retrend/"
             element={<HomePage setItemId={setItemId} mainSearch={mainSearch} />}
           />
           <Route

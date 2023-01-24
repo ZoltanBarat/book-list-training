@@ -1,27 +1,29 @@
 .NavBar__upper{
-    background-color: var(--color-MainBlue);
-    padding: 12px 15px;
-
+    padding: 28px 15px;
     display: grid;
     grid-template-columns: 1fr 0.5fr 1fr;
     grid-template-rows: 1fr;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
-
 }
 
-
 .NavBar__upper__item, .NavBar__lower__item {
-    color: white;
+    color: black;
     text-decoration: none;
 }
 
-.NavBar__upper__itemContainer, .NavBar__bar {
-    color: white;
+.NavBar__upper__item {
+    display: flex;
+    align-items: center;
+}
+
+.NavBar__upper__item svg{
+    width: 20px;    
+    height: 20px;
 }
 
 .NavBar__bar {
-    padding: 0px 15px;
+    margin: 0px 10px;
 }
 
 .NavBar__logout {
@@ -40,52 +42,32 @@
     align-items: center;
 }
 
-.NavBar__upper__nameContainer {
-    display: flex;
-    align-items: center;
-}
-
-.NavBar__upper__nameContainer {
-    display: flex;
-    align-items: center;
-}
-
 .NavBar__lower {
-    background-color: var(--color-SecondaryBlue);
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-
+   display: flex;   
+   flex-direction: row;
+   align-items: center;
 }
 
 .--centerItems {
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 .NavBar__lower__itemContainer {
-    padding: 10px;
+    padding: 5px;
+    margin: 0 15px;
+    color: #9b9b9b;
+    border-bottom: 2px solid transparent;
 }
 
 .NavBar__lower__itemContainer:hover {
-   background-color: #486683;
-   text-decoration: underline;
+   color: var(--color-Black);
    cursor: pointer;
 }
 
-/* .NavBar__upper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-} */
-
-.logo {
-    height: 55px;
-    width: auto;
+.NavBar__upper__item svg {
+    margin: 0 10px;
 }
 
 .NavBar__upper__itemContainer span{
@@ -100,21 +82,130 @@
     grid-auto-columns: 0.5fr;
 }
 
-.TextLogo {
-    letter-spacing: 5px;
-    font-weight: 1200;
-    font-size: large;
+.NavBar__infoBar {
+    background-color: #f2f2f2;
+    padding: 0 5%;
+    display: flex;
+    justify-content: space-between;
+}
 
-    background-color: rgb(244, 143, 177);
-    background-image: linear-gradient(297deg, rgba(255, 255, 255, 1) 0%, rgba(244, 143, 177, 1) 100%);
+.NavBar__infoBar__box__icon {
+    width: 18px;
+    height: 18px;
+}
 
-    background-size: 100%;
-    background-repeat: repeat;
-    
-    /* Use the text as a mask for the background. */
-    /* This will show the gradient as a text color rather than element bg. */
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-background-clip: text;
-    -moz-text-fill-color: transparent;
+.NavBar__infoBar__box, .NavBar__infoBar__lang__button {
+    width: fit-content;
+    padding: 7px 15px;
+    border-left: 1px solid #e5e5e5;
+    border-right: 1px solid #e5e5e5;
+}
+
+.NavBar__infoBar__box:hover {
+    background-color: #e5e5e5;
+}
+
+.NavBar__infoBar__box__icon {
+    width: 20px;
+    height: 20px;
+}
+.NavBar__infoBar__box__link {
+    text-decoration: none;
+}
+
+.NavBar__infoBar__box__link__text, .NavBar__infoBar__lang__text {
+    font-size: .625rem;
+    color: #9b9b9b;
+    margin-left: 5px;
+    text-decoration: none;
+}
+
+.NavBar__toolBar {
+    background-color: var(--color-Black);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.NavBar__toolBar__item {
+    padding: 12px 15px;
+}
+
+.NavBar__toolBar__item__text {
+    font-size: .625rem;
+    color: #fff;
+    text-transform: uppercase;
+    white-space: break-spaces;
+}
+
+.--navFocused {
+    color: var(--color-Black);
+    border-bottom: 2px solid black;
+}
+
+.NavBar__infoBar__lang {
+    display: flex;
+}
+
+.NavBar__infoBar__lang__icon {
+    width: 15px;
+    height: 15px;
+    display: block;
+}
+
+.NavBar__infoBar__lang__button {
+    border-top: none;
+    border-bottom: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.--active-lang {
+    background-color: #e5e5e5;
+}
+
+@media screen and (max-width: 730px){
+/*     .NavBar__upper {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        padding: 10px 5px;
+        grid-row-gap: 5px;
+    }
+    .NavBar__lower {
+        grid-area: 1 / 1 / 2 / 3;
+        grid-row-start: 2;
+        justify-content: center;
+    }
+    .NavBar__upper__logo {       
+        justify-content: flex-start;
+    }
+    .NavBar__upper__logo, .NavBar__upper__loginContainer {
+        grid-row-start: 1;
+    } */
+    .NavBar__upper {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 10px 5px;
+        gap: 15px;
+    }
+    .NavBar__lower {
+        order: 3;
+        width: 100%;    
+        justify-content: center;
+    }
+    .NavBar__bar {
+        opacity: 0;
+        margin: 0px 7px;
+    }
+    .NavBar__upper__logedinContainer{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 5px;
+        background-color: #f2f2f2;
+        padding: 8px;
+    }
+    .NavBar__upper .NavBar__upper__loginContainer .NavBar__upper__item:only-child {
+        position: absolute;
+        right: 5px;
+    }
 }

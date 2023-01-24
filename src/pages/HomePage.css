@@ -4,3 +4,17 @@
     object-position: center top;
     height: 400px;
 }
+
+.mainList {
+    display: flex;
+    margin: 0 auto;
+    max-width: 1400px;
+    margin-bottom: 5rem;
+    padding: 0 5px;
+}
+
+@media screen and (max-width: 730px){
+    .mainList {
+        flex-direction: column;
+    }
+}

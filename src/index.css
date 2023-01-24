@@ -25,6 +25,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--color-background);
   color: var(--color-MainText);
+  line-height: 1.15;
 }
 
 h2 {
@@ -34,9 +35,10 @@ h2 {
 }
 
 :root {
-  --color-background: #FDFCF8;
-  --color-MainText: #18232c;
-  --color-MainBlue: #263746;
+  --color-background: #ffffff;
+  --color-Black: #000000;
+  --color-MainText: #000000;
+  --color-MainBlue: #000000;
   --color-SecondaryBlue: #2f4457;
   --color-MainColor: #ECE8D9;
   --color-MainBorderColor: #ddd;
@@ -56,4 +58,12 @@ h2 {
   margin: 0 auto;
   max-width: 1150px;
   width: 100%;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 730px){
+  .subCenterContainer{
+    padding: 0 5px;
+    max-width: 100%;
+  }
 }

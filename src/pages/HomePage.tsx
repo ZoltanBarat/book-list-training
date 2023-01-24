@@ -1,14 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 import ItemList from '../components/ItemList/ItemList';
-import "./HomePage.css"
+import "./HomePage.css";
+import ItemListSide from '../components/ItemListSide/ItemListSide';
 
 function HomePage({
   setItemId,
   mainSearch,
 }: {
-  setItemId: Function;
-  mainSearch: string;
-}) {
+  setItemId: Function,
+  mainSearch: string,
+  }) {
+  const [subSearch, setSubSearch] = useState("all");
+
   return (
     <div>
       <div>
@@ -19,7 +22,10 @@ function HomePage({
           /* https://www.cabionline.uk/2020/07/21/the-inspiration-behind-our-fall-2020-collection/?__locale=GBR */
         />
       </div>
-      <ItemList setItemId={setItemId} mainSearch={mainSearch} />
+      <section className="mainList">
+        <ItemListSide subSearch={subSearch} setSubSearch={setSubSearch } mainSearch={mainSearch}/>
+        <ItemList setItemId={setItemId} mainSearch={mainSearch} subSearch={subSearch} setSubSearch={setSubSearch } />
+      </section>
     </div>
   );
 }

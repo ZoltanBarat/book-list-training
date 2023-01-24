@@ -1,36 +1,95 @@
 .footerWrapper {
-    background-color: var(--color-MainBlue);
-    color: white;
-    padding: 2%;
-
+    padding: 5%;
+    border-top: 1px solid rgb(229, 229, 229);
+}
+.footerContainer {   
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 0.5fr 0.5fr;
     grid-template-rows: 1fr;
     grid-column-gap: 30px;
     grid-row-gap: 0px;
-
-    margin-top: 60px;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
-.footer__techLogo {
-    margin-left: 15px;
-    height: 24px;
-    width: auto;
-}
-
-.footer__techLogoContainer {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-
-    padding: 5px;
+.footerAdditional {
+    padding-top: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .footer__techContainer ul {
-    margin-top: 20px;
-    margin-left: 50px;
+    list-style-type: none;
 }
 
 .footer__techContainer ul li{
     margin: 10px 0px;
+}
+
+.footer__techTitle {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 0;
+    margin-bottom: 1.2rem;
+}
+
+.footer__techContainer {
+    padding: 0 15%;
+}
+
+.footer__techItem a, .footer__techItem span {
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-decoration: none;
+    color: var(--color-MainText);
+}
+
+.footer__techItem a:hover {
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.footer__about p {
+    font-size: 0.875rem;
+    font-weight: 500
+}
+
+.footer__about p:last-child {
+    margin-top: 15px;
+}
+
+.footer__logo {
+    margin: 2% 0;
+}
+
+.footer__icon svg{
+    margin: 1rem 0.5rem;
+}
+
+.footer__icon svg{
+    width: 28px;    
+    height: 28px;
+}
+
+.footerAdditional p {
+    color: rgb(183, 183, 183);
+    line-height: 1.5;
+    font-weight: 500;
+    font-size: 0.75rem;
+}
+
+@media screen and (max-width: 730px){
+    .footerContainer {   
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 35px;
+    }
+    .footer__about {
+        grid-area: 1 / 1 / 2 / 3;
+    }
+    .footerAdditional {
+        text-align: justify;
+    }
 }

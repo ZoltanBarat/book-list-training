@@ -8,8 +8,7 @@ import {
     deleteDoc,
     doc,
     query,
-    where,
-    limit
+    where
 } from "firebase/firestore";
 
 export interface Item {    

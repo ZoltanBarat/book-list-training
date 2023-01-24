@@ -7,14 +7,21 @@ import {getAuth} from "firebase/auth"
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
+const apiKey = process.env.REACT_APP_APIKEY;
+const authDomain = process.env.REACT_APP_AUTHDOMAIN;
+const projectId = process.env.REACT_APP_PROJECTID;
+const storageBucket = process.env.REACT_APP_STORAGEBUCKET;
+const messagingSenderId = process.env.REACT_APP_MESSAGINGSENDERID;
+const appId = process.env.REACT_APP_APPID;
+
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDsguEAES0VaogUgEZoM1L7gEPbybo8Dn0",
-  authDomain: "react-booklist-eb75d.firebaseapp.com",
-  projectId: "react-booklist-eb75d",
-  storageBucket: "react-booklist-eb75d.appspot.com",
-  messagingSenderId: "472516758110",
-  appId: "1:472516758110:web:34aec64ba433fd8ae842cf"
+  apiKey: apiKey,
+  authDomain: authDomain,
+  projectId: projectId,
+  storageBucket: storageBucket,
+  messagingSenderId: messagingSenderId,
+  appId: appId
 };
 
 

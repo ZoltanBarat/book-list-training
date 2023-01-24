@@ -3,17 +3,13 @@ import { Navigate } from 'react-router-dom';
 import { useUserAuth } from '../context/UserAuthContext';
 
 function ProtectedRoute({ children }: any) {
+  const { user } = useUserAuth(); 
 
-    const { user } = useUserAuth(); 
-  
-    if (user === null) {
-      return <Navigate to="/" />;
-    } 
+  if (user === null) {
+    return <Navigate to="/retrend/" />;
+  } 
 
-    return children;
-    
-
-   
+  return children;       
 }
 
 export default ProtectedRoute;

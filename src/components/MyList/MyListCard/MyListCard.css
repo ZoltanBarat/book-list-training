@@ -1,11 +1,7 @@
 .myListItemContainer {
     margin: 20px 0px;
     padding: 15px;
-    background-color: var(--color-MainColor);
-
-    border-radius: 6px;
-    border: 1px solid var(--color-MainBorderColor);
-    box-shadow: 0 10px 34px -15px rgb(0 0 0 / 24%);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .myListItemTextGrid {
@@ -22,8 +18,9 @@
 }
 
 .myListItem__title {
-    font-size: small;
+    font-size: x-small;
     font-style: italic;
+    margin-bottom: 2px;
 }
 
 .myListItem__details {
@@ -65,11 +62,10 @@
 .descriptiontext {
     visibility: hidden;
     width: 300px;
-    color: white;
-    background-color: var(--color-SecondaryBlue);
-    border: 1px solid var(--color-MainBorderColor);
+    background-color: white;
+    border: 2px solid var(--color-Black);
     text-align: left;
-    border-radius: 6px;
+    border-radius: 2px;
     padding: 10px;
 
     /* Position the tooltip */
@@ -90,28 +86,19 @@
     grid-template-rows: 1fr;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
+    border: 2px solid var(--color-Black);
 }
 
 .myListInnerDeleteButton {
-    border: none;
+    background-color: transparent;
     font-weight: bolder;
     padding: 15px 0px;
+    border: none;
 }
 
-.myListInnerDelete__ok {
-    background-color: var(--color-Pink);
-    border-bottom-left-radius: 6px;
-    border-top-left-radius: 6px;
-}
-
-.myListInnerDelete__cancel {
-    background-color: var(--color-SecondaryBlue);
-    border-bottom-right-radius: 6px;
-    border-top-right-radius: 6px;
-}
 
 .myListInnerDelete__ok:hover {
-    background-color: #e991ae;
+    background-color: #c3262c;
 }
 
 .myListInnerDelete__cancel:hover {
@@ -121,6 +108,27 @@
 .myListItem__buttonColumn__Text {
     display: flex;
     justify-content: center;
-
-    font-size: small;
+    font-weight: 600;
 }
+
+@media screen and (max-width: 730px){
+    .myListItemTextGrid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+    }    
+    .myListItem__imgColumn {
+        grid-area: 1 / 1 / 2 / 3;
+    }
+    .myListItem__buttonColumn {
+        grid-area: 5 / 1 / 6 / 3;
+        max-width: 100%;
+        margin-top: 15px;
+        max-height: 100%;
+    }
+    .myListItem__buttonColumn .btn{
+        margin: 5px;
+    }
+    .descriptiontext{
+        margin-left: 0;
+    }
+  }

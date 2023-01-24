@@ -1,0 +1,75 @@
+{
+  "nomatch": {
+    "text": "Nem létező oldal!",
+    "link": "Vissza a kezdő oldalra"
+  },
+  "navbar": {
+    "all": "Mind",
+    "woman": "Női",
+    "man": "Férfi",
+    "login": "Bejelentkezés",
+    "about": "Az oldalról",
+    "add": "Új hosszáadása",
+    "myitem": "Saját elemek",
+    "logout": "Kijelentkezés",
+    "return": "30 napos visszaküldés",
+    "shipping": "Ingyenes szállítás",
+    "payment": "Biztonságos fizatés"
+  },
+  "footer": {
+    "about": "Ez egy tanulási projekt. Be tudsz jelentkezni/regisztrálni, megnézheted a rendelkezésre álló ruhákat és e-mailt küldhetsz a feltöltőnek. Ha bejelentkezel, új tárgyakat tölthetsz fel, megnézheted a tárgyaid listáját és szerkesztheted vagy törölheted azokat. Néhány véletlenszerű tárgyat feltöltöttem tesztelési céljából",
+    "madeBy": "Made by ",
+    "technologiesTitle": "Használt technológiák",
+    "featuresTitle" : "Features",
+    "features" : {
+      "Authentication": "Bejelentkezés",
+      "MultiLanguages": "Több nyelv",
+      "add/edit": "Termék hozzáadása és szerkesztése",
+      "filter": "Lista szűrése"
+    },
+    "additon" : "Ez az oldal csak bemutató céllal készült. Nem alkalmas éles használatra vagy valós funkciók ellátására. Csak a webfejlesztő képességeinek bemutatására és munkájának látványos megjelenítésére szolgál. Kérjük, vegye figyelembe, hogy az oldalon található bármilyen funkcionalitás vagy linkek nem működhetnek és az oldalon megjelenített információk lehet, hogy nem pontosak vagy naprakészek. Köszönjük a megértését."
+  },
+  "login": {
+    "login": "Bejelentkezés",
+    "register": "Regisztráció",
+    "email": "Email cím",
+    "password": "Jelszó",
+    "name": "Név",
+    "hasAccount": "Van már fiókod?",
+    "noAccount": "Még nincs fiókod?"
+  },
+  "itemList": {
+    "items": "ruhák",
+    "newer": "Legújabb termékek",
+    "older": "Legrégibb termékek",
+    "priceHight": "Legmagasabb ár",
+    "priceLow": "Legalacsonyabb ár",
+    "details": "Részletek",
+    "noItem": "Még nincs termék ebben a kategóriában!",
+    "size": "Méret"
+  },
+  "product": {
+    "price": "Ár",
+    "gender": "Nem",
+    "type": "Típus",
+    "size": "Méret",
+    "brand": "Márka",
+    "color": "Szín",
+    "city": "Város",
+    "uploaded": "Feltöltve",
+    "description": "Leírás",
+    "addew": "Új termék hozzáadása",
+    "name": "Termék neve",
+    "picture": "Kép",
+    "file": "Tallózás...",
+    "upload": "Feltöltés",
+    "submit": "Submit",
+    "update": "Termék szerkesztése",
+    "edit": "Szerkesztés",
+    "delete": "Törlés",
+    "show": "mutat",
+    "yourItem": "Termékeid",
+    "sure": "Biztos benne?"
+  }
+
+}

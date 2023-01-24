@@ -1,0 +1,74 @@
+{
+  "nomatch": {
+    "text": "Nothing to see here!",
+    "link": "Go to the home page"
+  },
+  "navbar": {
+    "all": "All",
+    "woman": "Woman",
+    "man": "Man",
+    "login": "Login",
+    "about": "About this page",
+    "add": "Add new item",
+    "myitem": "My items",
+    "logout": "Log out",
+    "return": "30 day return policy",
+    "shipping": "Free shipping",
+    "payment": "Secure payments"
+  },
+  "footer": {
+    "about": "This is a learning project. You can log in/register, see available clothes, and send an email to the uploader. If you login you can upload    new items, see your items in a list, and edit or delete your items. Some random items were uploaded for test.",
+    "madeBy": "Made by ",
+    "technologiesTitle": "Used technologies",
+    "featuresTitle" : "Features",
+    "features" : {
+      "Authentication": "Authentication",
+      "MultiLanguages": "Multi languages",
+      "add/edit": "Add and edit items",
+      "filter": "Filter item list"
+    },
+    "additon" : "This webpage is intended solely for showcase purposes. It is not intended for live use or to serve any functional purpose. It is designed solely to demonstrate the capabilities of the web developer and to provide a visual representation of their work. Please note that any functionality or links on this webpage may not be functional, and any information displayed may not be accurate or up-to-date. Thank you for your understanding."
+  },
+  "login": {
+    "login": "Login",
+    "register": "Register",
+    "email": "Email address",
+    "password": "Password",
+    "name": "Name",
+    "hasAccount": "Already have an account?",
+    "noAccount": "Don't have an account?"
+  },
+  "itemList": {
+    "items": "items",
+    "newer": "Newer first",
+    "older": "Older first",
+    "priceHight": "Highest price",
+    "priceLow": "Lowest price",
+    "details": "Details",
+    "noItem": "No item in this category yet!",
+    "size": "Size"
+  },
+  "product": {
+    "price": "Price",
+    "gender": "Gender",
+    "type": "Type",
+    "size": "Size",
+    "brand": "Brand",
+    "color": "Color",
+    "city": "City",
+    "uploaded": "Uploaded",
+    "description": "Description",
+    "addew": "Add new item",
+    "name": "Item Name",
+    "picture": "Picture",
+    "file": "Choose a File...",
+    "upload": "Upload",
+    "submit": "Submit",
+    "update": "Update item",
+    "edit": "Edit",
+    "delete": "Delete",
+    "show": "show",
+    "yourItem": "Your items",
+    "sure": "Are you sure?"
+  }
+}

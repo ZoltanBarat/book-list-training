@@ -1,60 +1,19 @@
 import { getDownloadURL, ref, uploadBytesResumable } from 'firebase/storage';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { useUserAuth } from '../../context/UserAuthContext';
 import Button from '../../elements/Button';
 import { storage } from "../../firebase-config";
 import ItemDataService from '../../services/firebase-services';
 import "./AddUpdateItem.css";
-
+import {clothingTypes} from "../../clothingTypes"
+import { useTranslation } from "react-i18next";
 import { TestUPLOAD_DATA } from "../UPLOAD_DATA";
 
 
-
-function AddItem({id, setItemId} : {id: string, setItemId: Function}) {
-
-  interface userInterface {
-    user: {
-      email: string,
-      displayName: string,
-      uid: string,
-    };
-  }
-
+function AddItem({ id, setItemId }: { id: string, setItemId: Function }) {
+  
+  const { t, i18n } = useTranslation();
   const { user } = useUserAuth();
-
-  const [title, setTitle] = useState('');
-  const [author, setAuthor] = useState('');
-  const [avaible, setAvaible] = useState('yes'); 
-
-  const clothingTypes = [
-    "Sweater",
-    "Dress",
-    "Hoodies",
-    "T-shirt",
-    "Flip-flops",
-    "Shorts",
-    "Skirt",
-    "Jeans",
-    "Shoes",
-    "Coat",
-    "High heels",
-    "Suit",
-    "Cap",
-    "Socks",
-    "Shirt",
-    "Bra",
-    "Scarf",
-    "Swimsuit",
-    "Hat",
-    "Gloves",
-    "Jacket",
-    "Long coat",
-    "Boots",
-    "Sunglasses",
-    "Tie",
-    "Polo shirt",
-    "Leather jackets",
-  ];
 
   const [item, setItem] = useState({
     name: "",
@@ -113,15 +72,6 @@ function AddItem({id, setItemId} : {id: string, setItemId: Function}) {
     const date = { milliseconds: Date.now() };       
     setMessage({ error: false, msg: "" });
 
-    /* if (title === "" || author === "") {
-      setMessage({ error: true, msg: "Fields are mandatory" })
-      return;
-    } */
-
-    /* const updatedItem = {
-      item,
-    }; */
-
     if (progress === "Done") {
       const newItem = {
         item,
@@ -132,16 +82,6 @@ function AddItem({id, setItemId} : {id: string, setItemId: Function}) {
       };
 
       try {
-       /*  if (id !== undefined && id !== "") {
-          await ItemDataService.updateItem(id, updatedItem);
-          setItemId("");
-          setMessage({ error: false, msg: "Updated successfully" });
-        } else {
-          await ItemDataService.addItems(newItem);
-          setMessage({ error: false, msg: "New Item has been added" });
-          console.log(newItem);
-        } */
-
         await ItemDataService.addItems(newItem);
         setMessage({ error: false, msg: "New Item has been added" });
         
@@ -206,16 +146,16 @@ function AddItem({id, setItemId} : {id: string, setItemId: Function}) {
 
    
   return (
-    <div className="centerContainer">
+  
       <div className="subCenterContainer">
         <div>{message.msg}</div>
-        <h2 className="AddUpMain__title">Add new item</h2>
+        <h2 className="AddUpMain__title">{t("product.addew")}</h2>
         <div className="AddUpItemWrapper">
           <div className="formContainer">
             <form id="addItemForm" onSubmit={handleSubmit}>
               <div className="inputContainer">
                 <label>
-                  Item Name
+                  {t("product.name")}
                   <input
                     required
                     className="input"
@@ -229,7 +169,7 @@ function AddItem({id, setItemId} : {id: string, setItemId: Function}) {
               </div>
               <div className="inputContainer">
                 <label>
-                  Price
+                  {t("product.price")}
                   <input
                     required
                     className="input"
@@ -245,7 +185,7 @@ function AddItem({id, setItemId} : {id: string, setItemId: Function}) {
               </div>
               <div className="inputContainer">
                 <label>
-                  Gender
+                  {t("product.gender")}
                   <select
                     className="select"
                     required
@@ -266,7 +206,7 @@ function AddItem({id, setItemId} : {id: string, setItemId: Function}) {
 
               <div className="inputContainer">
                 <label>
-                  Type
+                  {t("product.type")}
                   <input
                     className="select"
                     list="typeList"
@@ -277,7 +217,7 @@ function AddItem({id, setItemId} : {id: string, setItemId: Function}) {
                     onChange={(e) => setItem({ ...item, type: e.target.value })}
                   ></input>
                   <datalist id="typeList">
-                    {clothingTypes.map((types, index) => (
+                    {(i18n.language === "en" ? clothingTypes.en : clothingTypes.hu).map((types, index) => (
                       <option key={index} value={types} />
                     ))}
                   </datalist>
@@ -286,7 +226,7 @@ function AddItem({id, setItemId} : {id: string, setItemId: Function}) {
 
               <div className="inputContainer">
                 <label>
-                  Size
+                  {t("product.size")}
                   <select
                     className="select"
                     required
@@ -307,7 +247,7 @@ function AddItem({id, setItemId} : {id: string, setItemId: Function}) {
 
               <div className="inputContainer">
                 <label>
-                  Brand
+                  {t("product.brand")}
                   <input
                     required
                     className="input"
@@ -324,7 +264,7 @@ function AddItem({id, setItemId} : {id: string, setItemId: Function}) {
 
               <div className="inputContainer">
                 <label>
-                  Color
+                  {t("product.color")}
                   <input
                     required
                     className="input"
@@ -341,7 +281,7 @@ function AddItem({id, setItemId} : {id: string, setItemId: Function}) {
 
               <div className="inputContainer">
                 <label>
-                  City
+                  {t("product.city")}
                   <input
                     required
                     className="input"
@@ -355,7 +295,7 @@ function AddItem({id, setItemId} : {id: string, setItemId: Function}) {
               </div>
               <div className="inputContainer">
                 <label>
-                  Description
+                  {t("product.description")}
                   <textarea
                     className="textArea"
                     rows={4}
@@ -374,11 +314,11 @@ function AddItem({id, setItemId} : {id: string, setItemId: Function}) {
             </form>
           </div>
           <div className="fileUpContainer">
-            <label>Picture</label>
+            <label>{t("product.picture")}</label>
             <div className="fileUpButton__container">
               <form className="fileUpForm" /* onSubmit={handleUpload} */>
                 <label htmlFor="imgPre" className="fileUpButton">
-                  🗀 Choose a File...
+                  🗀 {t("product.file")}
                 </label>
                 <input
                   id="imgPre"
@@ -405,7 +345,7 @@ function AddItem({id, setItemId} : {id: string, setItemId: Function}) {
                   )}
                 </div>
                 <Button
-                  text="Upload"
+                  text={t("product.upload")}
                   onClick={(e: { preventDefault: () => void }) =>
                     handleUpload(e)
                   }
@@ -429,7 +369,7 @@ function AddItem({id, setItemId} : {id: string, setItemId: Function}) {
         </div>
         <div className="button">
           <Button
-            text="Submit"
+            text={t("product.submit")}
             margin
             type="submit"
             form="addItemForm"
@@ -440,7 +380,7 @@ function AddItem({id, setItemId} : {id: string, setItemId: Function}) {
           Test the random item generator 
         </button> 
       </div>
-    </div>
+   
   );
 }
 
