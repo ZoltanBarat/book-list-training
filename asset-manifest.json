@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/used-clothing/static/css/main.f42f52bf.css",
+    "main.css": "/used-clothing/static/css/main.9aeea432.css",
     "main.js": "/used-clothing/static/js/main.27b4218d.js",
     "static/js/787.8b13ecbe.chunk.js": "/used-clothing/static/js/787.8b13ecbe.chunk.js",
     "index.html": "/used-clothing/index.html",
-    "main.f42f52bf.css.map": "/used-clothing/static/css/main.f42f52bf.css.map",
+    "main.9aeea432.css.map": "/used-clothing/static/css/main.9aeea432.css.map",
     "main.27b4218d.js.map": "/used-clothing/static/js/main.27b4218d.js.map",
     "787.8b13ecbe.chunk.js.map": "/used-clothing/static/js/787.8b13ecbe.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f42f52bf.css",
+    "static/css/main.9aeea432.css",
     "static/js/main.27b4218d.js"
   ]
 }
