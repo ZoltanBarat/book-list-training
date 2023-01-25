@@ -6,7 +6,7 @@ function ProtectedRoute({ children }: any) {
   const { user } = useUserAuth(); 
 
   if (user === null) {
-    return <Navigate to="/retrend/" />;
+    return <Navigate to="/used-clothing/" />;
   } 
 
   return children;       

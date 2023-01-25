@@ -23,7 +23,7 @@ function Login() {
     try {
       await logIn(email.toLowerCase(), password);
       toast(<h3 className="toast">You are logged in!</h3>);
-      navigate("/retrend/");
+      navigate("/used-clothing/");
     } catch (err: any) {
       toast(<h3 className="toast">{err.message}</h3>, { time: 3000, position: "bottom-center" });
     }
@@ -33,7 +33,7 @@ function Login() {
     try {
       await logIn("lucas@testmailx.com", "123456");
       toast(<h3 className="toast">You are logged in!</h3>);
-      navigate("/retrend/");
+      navigate("/used-clothing/");
     } catch (err: any) {
       toast(<h3 className="toast">{err.message}</h3>, { time: 3000, position: "bottom-center" });
     }

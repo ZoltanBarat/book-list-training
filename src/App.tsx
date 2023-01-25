@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link, Navigate, Route, Routes } from "react-router-dom";
+import { Link, Route, Routes } from "react-router-dom";
 import AddItem from './components/AddUpdateItem/AddUpdateItem';
 import Login from './components/Login/Login';
 import NavBar from "./components/NavBar/NavBar";
@@ -41,7 +41,7 @@ function NoMatch() {
       <div className="subCenterContainer">      
           <h2>{t('nomatch.text')}</h2>
           <p>
-            <Link to="/retrend/">{t('nomatch.link')}</Link>
+            <Link to="/used-clothing/">{t('nomatch.link')}</Link>
           </p>
       </div>
     </div>
@@ -59,10 +59,9 @@ function App() {
         <ScrollToTop />
         <NotificationModal />
         <Routes>
-          <Route path="/used-clothing/" element={<Navigate to="/retrend/"/>} />
           <Route path="/test" element={<Loading />} />
           <Route 
-            path="/retrend/"
+            path="/used-clothing/"
             element={<HomePage setItemId={setItemId} mainSearch={mainSearch} />}
           />
           <Route

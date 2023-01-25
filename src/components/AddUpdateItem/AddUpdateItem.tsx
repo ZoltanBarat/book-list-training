@@ -7,7 +7,6 @@ import ItemDataService from '../../services/firebase-services';
 import "./AddUpdateItem.css";
 import {clothingTypes} from "../../clothingTypes"
 import { useTranslation } from "react-i18next";
-import { TestUPLOAD_DATA } from "../UPLOAD_DATA";
 
 
 function AddItem({ id, setItemId }: { id: string, setItemId: Function }) {
