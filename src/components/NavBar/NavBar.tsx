@@ -85,10 +85,10 @@ function NavBar({
 
       <div className="NavBar__upper">
         <nav className="NavBar__lower">
-          <Link className="NavBar__lower__item" to="/retrend/" onClick={() => setMainSearch("all")}>
+          <Link className="NavBar__lower__item" to="/used-clothing/" onClick={() => setMainSearch("all")}>
             <div className={`NavBar__lower__itemContainer --centerItems ${mainSearch === "all" ? "--navFocused" : null}`}>{t("navbar.all")}</div>
           </Link>
-          <Link className="NavBar__lower__item" to="/retrend/">
+          <Link className="NavBar__lower__item" to="/used-clothing/">
             <div
               className={`NavBar__lower__itemContainer --centerItems ${mainSearch === "woman" ? "--navFocused" : null}`}
               onClick={() => {setMainSearch("woman")}}
@@ -98,7 +98,7 @@ function NavBar({
           </Link>
           <Link
             className="NavBar__lower__item"
-            to="/retrend/"
+            to="/used-clothing/"
             onClick={() => {
               setMainSearch("man");
             }}
@@ -107,7 +107,7 @@ function NavBar({
           </Link>
         </nav>
         <div className="NavBar__upper__logo --centerItems">
-          <Link className="NavBar__upper__item" to="/retrend/">
+          <Link className="NavBar__upper__item" to="/used-clothing/">
             <Logo />
           </Link>
         </div>
@@ -148,7 +148,7 @@ function NavBar({
             <div className="NavBar__bar">|</div>
             <div className="NavBar__upper__itemContainer">
               <p className="NavBar__logout" onClick={handlelogOut}>
-                <Link className="NavBar__upper__item" to="/retrend/">
+                <Link className="NavBar__upper__item" to="/used-clothing/">
                   <span>{t("navbar.logout")}</span>
                 </Link>
               </p>
