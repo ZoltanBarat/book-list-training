@@ -59,7 +59,7 @@ function App() {
         <ScrollToTop />
         <NotificationModal />
         <Routes>
-          <Route index element={<Navigate to="/retrend/" />} />
+          <Route path="/used-clothing/" element={<Navigate to="/retrend/"/>} />
           <Route path="/test" element={<Loading />} />
           <Route 
             path="/retrend/"

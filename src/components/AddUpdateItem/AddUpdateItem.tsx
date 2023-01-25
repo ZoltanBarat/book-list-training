@@ -104,46 +104,6 @@ function AddItem({ id, setItemId }: { id: string, setItemId: Function }) {
     
  
   } 
-
-  /* const editHandler = async() => {
-    setMessage({ error: false, msg: "" });
-    try {
-      const docSnap = await ItemDataService.getItem(id);
-      
-      setTitle(docSnap.data()?.title);
-      setAuthor(docSnap.data()?.author);
-      setAvaible(docSnap.data()?.avaible);    
-
-    setItem({
-      name: docSnap.data()?.name,
-      price: docSnap.data()?.price,
-      gender: docSnap.data()?.gender,
-      type: docSnap.data()?.type,
-      size: docSnap.data()?.size,
-      brand: docSnap.data()?.brand,
-      color: docSnap.data()?.color,
-      city: docSnap.data()?.city,
-      description: docSnap.data()?.description,
-    });
- 
-      
-    } catch (err: any) {
-      setMessage({ error: true, msg: err.message });
-    }
-  }
-
-  useEffect(() => {
-    console.log(id);
-    if (id !== undefined && id !== "") {
-      editHandler();
-    }
-    if (id === 'xxxx') {
-      setTitle("");
-      setAuthor("");
-      setImgURL("");
-    }
-  }, [id]) */
-
    
   return (
   
@@ -376,9 +336,6 @@ function AddItem({ id, setItemId }: { id: string, setItemId: Function }) {
             value="submit"
           />
         </div>
-        <button onClick={() => TestUPLOAD_DATA()}>
-          Test the random item generator 
-        </button> 
       </div>
    
   );

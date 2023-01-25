@@ -38,3 +38,7 @@
 .toSingUpText {
     margin-top: 20px;
 }
+
+.btnTest {
+    opacity: 0.5;
+}
