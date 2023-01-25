@@ -113,3 +113,10 @@
       opacity: 1;
     }
 }
+
+@media screen and (max-width: 730px){
+    .cardText__size {
+      opacity: 1;
+      position: relative;
+    }
+  }

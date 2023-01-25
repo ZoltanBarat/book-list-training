@@ -2,8 +2,8 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     background-color: rgba(128, 128, 128, 0.5);
     transition: left 1.5s;
     z-index: 1000;
@@ -13,11 +13,11 @@
 }
 
 .NModalContainer {
-    margin: 20%;
+    margin: 2%;
     background-color: white;
     border: 2px solid black;
-    padding: 40px 70px;
-    max-width: 20vw;
+    padding: 3% 4%;
+    max-width: 650px;
     text-align: center;
     
 }
