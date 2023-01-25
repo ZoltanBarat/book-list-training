@@ -4,6 +4,8 @@ import { useUserAuth } from "../../context/UserAuthContext";
 import Logo from "./Logo";
 import { useTranslation } from "react-i18next";
 import toast from 'react-simple-toasts';
+import { Rerousel } from 'rerousel';
+import { useRef } from "react";
 
 function NavBar({
   setMainSearch,
@@ -15,7 +17,8 @@ function NavBar({
   const { t, i18n } = useTranslation();
   const { user } = useUserAuth();
   const { logOut } = useUserAuth();
-
+  const toolBarItem = useRef(null);
+  
   const handlelogOut = async () => {
     try {
       await logOut();
@@ -155,7 +158,8 @@ function NavBar({
       </div>
 
       <div className="NavBar__toolBar">
-        <div className="NavBar__toolBar__item --centerItems">
+        <Rerousel itemRef={toolBarItem}>
+        <div className="NavBar__toolBar__item --centerItems" ref={toolBarItem}>
           <span className="NavBar__toolBar__item__text">{t("navbar.return")}</span>
         </div>
         <div className="NavBar__toolBar__item --centerItems">
@@ -163,7 +167,8 @@ function NavBar({
         </div>
         <div className="NavBar__toolBar__item --centerItems">
           <span className="NavBar__toolBar__item__text">{t("navbar.payment")}</span>
-        </div>
+          </div>
+        </Rerousel>
       </div>
       
     </div>

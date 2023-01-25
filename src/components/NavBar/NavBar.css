@@ -122,11 +122,10 @@
 
 .NavBar__toolBar {
     background-color: var(--color-Black);
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
 }
 
 .NavBar__toolBar__item {
+    width: 100%;
     padding: 12px 15px;
 }
 
@@ -165,23 +164,6 @@
 }
 
 @media screen and (max-width: 730px){
-/*     .NavBar__upper {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        padding: 10px 5px;
-        grid-row-gap: 5px;
-    }
-    .NavBar__lower {
-        grid-area: 1 / 1 / 2 / 3;
-        grid-row-start: 2;
-        justify-content: center;
-    }
-    .NavBar__upper__logo {       
-        justify-content: flex-start;
-    }
-    .NavBar__upper__logo, .NavBar__upper__loginContainer {
-        grid-row-start: 1;
-    } */
     .NavBar__upper {
         display: flex;
         flex-wrap: wrap;
